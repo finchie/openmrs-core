@@ -80,6 +80,14 @@ public class Patient extends Person implements java.io.Serializable {
 	// Property accessors
 	
 	/**
+	 * allow people to code defensively against our someday data model change.
+	 * @return this Patient as Person
+	 */
+	Person getPerson() {
+		return this;
+	}
+	
+	/**
 	 * @return internal identifier for patient
 	 */
 	public Integer getPatientId() {
